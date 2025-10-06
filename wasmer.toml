@@ -6,22 +6,45 @@ description = "Laravel project on Wasmer"
 [dependencies]
 "php/php" = "8.2"
 
+[fs]
+"public" = "public"
+"app" = "app"
+"bootstrap" = "bootstrap"
+"config" = "config"
+"database" = "database"
+"resources" = "resources"
+"routes" = "routes"
+"storage" = "storage"
+"vendor" = "vendor"
+".env" = ".env"
+"artisan" = "artisan"
+"composer.json" = "composer.json"
+
 [build]
 steps = [
   "curl -sS https://getcomposer.org/installer | php",
   "php composer.phar install --optimize-autoloader --no-dev --no-interaction",
   "cp .env.example .env",
-  "php artisan key:generate --no-interaction",
   "npm install",
   "npm run build"
 ]
 
 [[command]]
 name = "script"
-module = "php/php:8.2"
+module = "php/php:php"
 runner = "https://webc.org/runner/wasi"
 annotations = { wasi = { main-args = ["-S", "0.0.0.0:8080", "-t", "public"] } }
 
 [env]
 APP_ENV = "production"
+APP_DEBUG = "false"
+APP_KEY = "base64:vxkAtQL0chIjtq4VCAKI5qQYGF6PUYDQ9WQmRjcyWKU="
 DB_CONNECTION = "mysql"
+DB_HOST = "db.fr-pari1.bengt.wasmernet.com"
+DB_PORT = "10272"
+DB_DATABASE = "dbPM4kun8R9HBTJC5suuQWcV"
+DB_USERNAME = "3916a408768f8000a76ebb9e6e3c"
+DB_PASSWORD = "068e3916-a408-7fc4-8000-32596d92fd70"
+SESSION_DRIVER = "database"
+CACHE_STORE = "redis"
+QUEUE_CONNECTION = "redis"
