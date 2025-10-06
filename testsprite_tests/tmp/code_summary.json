@@ -1,0 +1,97 @@
+{
+  "tech_stack": [
+    "PHP",
+    "Laravel",
+    "MySQL",
+    "JavaScript",
+    "Composer",
+    "Vite"
+  ],
+  "features": [
+    {
+      "name": "User Authentication",
+      "description": "Handles user login, registration, and logout for user accounts.",
+      "files": [
+        "app/Http/Controllers/User/UserAuthController.php",
+        "routes/web.php",
+        "resources/views/auth/login.blade.php",
+        "resources/views/auth/register.blade.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "Super Admin Management",
+      "description": "Provides functionality for super administrators, including product, category, order, shop, and CMS content management.",
+      "files": [
+        "app/Http/Controllers/SuperAdminController.php",
+        "app/Http/Controllers/SuperAdmin/ProductController.php",
+        "app/Http/Controllers/SuperAdmin/CategoryController.php",
+        "app/Http/Controllers/SuperAdmin/OrderController.php",
+        "app/Http/Controllers/SuperAdmin/ShopController.php",
+        "app/Http/Controllers/SuperAdmin/CmsController.php",
+        "routes/web.php",
+        "app/Http/Middleware/SuperAdmin.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "Vendor Management",
+      "description": "Provides functionality for vendors, including product, category, and order management.",
+      "files": [
+        "app/Http/Controllers/Admin/AuthController.php",
+        "app/Http/Controllers/Vendor/VendorController.php",
+        "app/Http/Controllers/Vendor/ProductController.php",
+        "app/Http/Controllers/Vendor/CategoryController.php",
+        "app/Http/Controllers/Vendor/OrderController.php",
+        "routes/web.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "Product Catalog & Browsing",
+      "description": "Allows users to view products, browse by category, and search for products.",
+      "files": [
+        "app/Http/Controllers/User/HomeController.php",
+        "app/Http/Controllers/User/ProductController.php",
+        "app/Models/Product.php",
+        "app/Models/Category.php",
+        "resources/views/user/product/show.blade.php",
+        "resources/views/user/category/show.blade.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "Shopping Cart & Checkout",
+      "description": "Manages adding products to a cart, updating quantities, and processing orders through a checkout flow.",
+      "files": [
+        "app/Http/Controllers/User/CartController.php",
+        "app/Http/Controllers/User/CheckoutController.php",
+        "app/Http/Controllers/User/OrderController.php",
+        "app/Models/Order.php",
+        "app/Models/OrderItem.php",
+        "resources/views/user/cart/index.blade.php",
+        "resources/views/user/checkout/show.blade.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "User Profile & Account Management",
+      "description": "Allows authenticated users to manage their profile, view past orders, and potentially manage wishlists and addresses.",
+      "files": [
+        "app/Http/Controllers/User/ProfileController.php",
+        "app/Http/Controllers/User/AccountController.php",
+        "routes/web.php"
+      ],
+      "api_doc": {}
+    },
+    {
+      "name": "Guest User Functionality",
+      "description": "Provides temporary guest access and allows guest users to browse and potentially make purchases.",
+      "files": [
+        "routes/web.php",
+        "resources/views/guest/show.blade.php"
+      ],
+      "api_doc": {}
+    }
+  ]
+}

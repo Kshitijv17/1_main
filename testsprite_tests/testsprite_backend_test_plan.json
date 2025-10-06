@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TC001",
+    "title": "user authentication login and registration",
+    "description": "Test the user authentication endpoints for login and registration to ensure secure access for both users and administrators with correct role differentiation."
+  },
+  {
+    "id": "TC002",
+    "title": "admin panel user product category order shop management",
+    "description": "Verify the admin panel APIs for creating, reading, updating, and deleting users, products, categories, orders, and shops to ensure full administrative control."
+  },
+  {
+    "id": "TC003",
+    "title": "user profile and order management",
+    "description": "Test user management endpoints for viewing and updating profiles, as well as accessing order history and interactions."
+  },
+  {
+    "id": "TC004",
+    "title": "product catalog browsing and filtering",
+    "description": "Validate product catalog APIs to ensure users can browse products by category, view detailed product information, and see product images correctly."
+  },
+  {
+    "id": "TC005",
+    "title": "order creation and tracking",
+    "description": "Test order management endpoints for creating new orders, tracking order status, and managing order items with updates reflected in user profiles."
+  },
+  {
+    "id": "TC006",
+    "title": "shop management functionality",
+    "description": "Verify shop management APIs to handle multiple shops registration, updates, and retrieval within the platform."
+  },
+  {
+    "id": "TC007",
+    "title": "cms content management",
+    "description": "Test CMS content management endpoints to ensure administrators can create, update, and display static content pages correctly."
+  },
+  {
+    "id": "TC008",
+    "title": "permissions and roles access control",
+    "description": "Validate permissions and roles management APIs to enforce role-based access control and authorization policies across the platform."
+  }
+]

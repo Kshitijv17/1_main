@@ -1,0 +1,570 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Registration with valid data",
+    "description": "Verify that a new user can register successfully with valid details.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the registration page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid user details including username, email, and password."
+      },
+      {
+        "type": "action",
+        "description": "Submit the registration form."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm registration success message and automatic login or redirect to login page."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Registration with invalid email format",
+    "description": "Check that registration fails when an invalid email address is provided.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the registration page."
+      },
+      {
+        "type": "action",
+        "description": "Input all required fields with a malformed email format."
+      },
+      {
+        "type": "action",
+        "description": "Submit the form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that an email validation error is shown and registration is prevented."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Admin Login with valid credentials",
+    "description": "Verify that an administrator can log in using valid admin credentials.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the admin login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid administrator username and password."
+      },
+      {
+        "type": "action",
+        "description": "Click the login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm successful login and redirect to the admin dashboard."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Admin Login with incorrect password",
+    "description": "Check the login failure behavior when an incorrect password is submitted for admin login.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Go to the admin login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter a valid admin username with a wrong password."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to log in."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure login is rejected and an appropriate error message is displayed."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "User can browse products by category",
+    "description": "Verify that users can filter and browse products by category from the product catalog.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "User logs in and navigates to the product catalog page."
+      },
+      {
+        "type": "action",
+        "description": "Select a product category filter."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that only products belonging to the selected category are displayed."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "User views detailed product page",
+    "description": "Check that a detailed product page with all information and images loads correctly when a product is selected.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "From the product catalog, click on a product name or image."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the detailed product page shows product details, pricing, description, and images."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Add product to cart and place order",
+    "description": "Verify that a user can add a product to the shopping cart and successfully place an order.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a user."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to a product and add it to the cart."
+      },
+      {
+        "type": "action",
+        "description": "Proceed to checkout and complete order placement."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm order creation and receipt of confirmation message."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Track order status from user profile",
+    "description": "Ensure that users can view and track their orders and the current status from their profile page.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a user with existing orders."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the order history or my orders page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify current order statuses are displayed correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Admin CRUD operations on users",
+    "description": "Verify that administrators can create, read, update, and delete users from the admin panel.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and navigate to user management page."
+      },
+      {
+        "type": "action",
+        "description": "Create a new user with valid data."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm user creation is successful and user appears in list."
+      },
+      {
+        "type": "action",
+        "description": "Edit an existing user’s information."
+      },
+      {
+        "type": "assertion",
+        "description": "Validate that the updated information is saved and displayed."
+      },
+      {
+        "type": "action",
+        "description": "Delete a user from the list."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure user is removed from the list and database."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Admin manages products including images",
+    "description": "Confirm that admins can add, edit, delete products and upload associated product images correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Admin logs in and goes to product management panel."
+      },
+      {
+        "type": "action",
+        "description": "Create a new product with complete details and upload images."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product creation success and images display correctly."
+      },
+      {
+        "type": "action",
+        "description": "Edit product information."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that edits are saved and reflected on product listings."
+      },
+      {
+        "type": "action",
+        "description": "Delete a product."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm product is removed completely."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Admin manages categories",
+    "description": "Test that admin users can perform full CRUD operations on product categories.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Admin navigates to category management page."
+      },
+      {
+        "type": "action",
+        "description": "Create a new product category with valid details."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm category is added and appears in the category list."
+      },
+      {
+        "type": "action",
+        "description": "Edit an existing category name or description."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updates are saved and appear correctly."
+      },
+      {
+        "type": "action",
+        "description": "Delete a category."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure category no longer exists and products are handled as per business rules."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Order lifecycle management by admin",
+    "description": "Verify that administrators can view, update, and manage orders including modifying item quantities and statuses.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and open order management panel."
+      },
+      {
+        "type": "action",
+        "description": "Select an existing order and update order status."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that order status is updated correctly and reflected in user views."
+      },
+      {
+        "type": "action",
+        "description": "Modify order items (add, update quantity, remove)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify order items update accurately and total amounts adjust accordingly."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Shop Management CRUD operations",
+    "description": "Admin is able to create, read, update, and delete shops within the platform.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as admin and access shop management interface."
+      },
+      {
+        "type": "action",
+        "description": "Add a new shop with required information."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the new shop is created and listed correctly."
+      },
+      {
+        "type": "action",
+        "description": "Edit existing shop details."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure changes are saved and visible."
+      },
+      {
+        "type": "action",
+        "description": "Delete a shop."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm shop removal from the system without residual data."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "CMS content management by admins",
+    "description": "Verify that administrators can create, update, and delete static CMS pages and content.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Admin logs in and opens CMS management area."
+      },
+      {
+        "type": "action",
+        "description": "Create new static content page with title and content."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the new CMS page is accessible and content displays correctly."
+      },
+      {
+        "type": "action",
+        "description": "Edit existing CMS page content."
+      },
+      {
+        "type": "assertion",
+        "description": "Validate that updates appear on the live page."
+      },
+      {
+        "type": "action",
+        "description": "Delete a CMS page."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the content page is removed and returns a 404 or appropriate message when accessed."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Role-based access control enforcement",
+    "description": "Test that features and pages are accessible only based on assigned user roles and permissions.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a user."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to access admin panel pages and restricted functions."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify access is denied and appropriate error or redirect occurs."
+      },
+      {
+        "type": "action",
+        "description": "Login as admin and verify access to all administrative features."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm full access based on role permissions."
+      },
+      {
+        "type": "action",
+        "description": "Change admin user permissions and test access modifications."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure access is properly restricted or granted accordingly."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Password reset flow for users",
+    "description": "Verify users can request a password reset and successfully update their password using the email link.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the password reset request page."
+      },
+      {
+        "type": "action",
+        "description": "Submit registered user email for password reset."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that a password reset email is sent."
+      },
+      {
+        "type": "action",
+        "description": "Use the link in the received email to open the reset password form."
+      },
+      {
+        "type": "action",
+        "description": "Input a new password and confirm."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify password update success and ability to login with the new password."
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Database migration and seeding runs without errors",
+    "description": "Ensure all database migrations and seeders execute successfully setting up required initial users, roles, categories, products, and permissions.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Run all database migrations on a clean database."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that all tables are created as per schema with no errors."
+      },
+      {
+        "type": "action",
+        "description": "Run all database seeders."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that initial data for users, roles, permissions, categories, and products is inserted without errors."
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Unauthorized API access returns proper error",
+    "description": "Verify that API endpoints deny access and return appropriate error codes when unauthorized requests are made.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Send API request to protected resource without authentication token."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure response status is 401 Unauthorized with a relevant error message."
+      },
+      {
+        "type": "action",
+        "description": "Send API request with authentication token but insufficient permissions."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm response status is 403 Forbidden."
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Concurrent order placement prevents stock overselling",
+    "description": "Verify that the system handles concurrent order placements for limited stock products ensuring no overselling occurs.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Identify a product with limited stock quantity."
+      },
+      {
+        "type": "action",
+        "description": "Simulate multiple users attempting to place orders for the product at the same time exceeding stock."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the system only processes orders up to available stock and rejects or backorders excess."
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Search functionality returns accurate results",
+    "description": "Verify product search returns relevant and accurate results based on keywords entered by users.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access the product catalog search input."
+      },
+      {
+        "type": "action",
+        "description": "Enter a valid product keyword and submit search."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm search results display products matching the keyword in name or description."
+      },
+      {
+        "type": "action",
+        "description": "Search for a non-existent product keyword."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no results are found and relevant message is shown."
+      }
+    ]
+  }
+]

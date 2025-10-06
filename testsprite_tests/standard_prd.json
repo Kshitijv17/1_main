@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "project": "E-Commerce Platform",
+    "date": "2025-09-13",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "The E-Commerce Platform enables users and administrators to interact in a seamless online store environment. It supports user authentication, product and order management, administrative control, and content management, providing a comprehensive solution for online retail.",
+  "core_goals": [
+    "Provide secure and reliable user authentication for users and admins.",
+    "Enable administrators to manage the platform including users, products, categories, orders, and shops.",
+    "Allow users to browse product catalogs, place and track orders, and manage their profiles.",
+    "Support management of multiple shops within the platform.",
+    "Provide CMS functionalities for managing static content pages.",
+    "Ensure role-based permissions and access control across the platform."
+  ],
+  "key_features": [
+    "User Authentication with login, registration, password reset, and role differentiation between users and admins.",
+    "Admin Panel for managing users, products, categories, orders, and shops with dedicated views and controllers.",
+    "User Management including profile, order history, and interactions.",
+    "Product Catalog showcasing products by category with detailed product pages and images.",
+    "Order Management to create, track orders and manage order items.",
+    "Shop Management for handling multiple shops registered on the platform.",
+    "CMS Content Management for static pages to be maintained by admins.",
+    "Permissions and Roles management to enforce access control and authorization policies."
+  ],
+  "user_flow_summary": [
+    "Users can register, login, and logout securely with role-based access (user or admin).",
+    "Users browse product catalogs filtered by categories and view detailed product information.",
+    "Users add products to their cart and place orders, then track order status from their account page.",
+    "Administrators log in to the admin panel to manage users, products, categories, orders, and shops.",
+    "Admins create and update content on static pages via the CMS for the platform.",
+    "Admins assign and update user roles and permissions to control access across features."
+  ],
+  "validation_criteria": [
+    "Successful login and registration flows for both users and administrators.",
+    "Admins are able to CRUD users, products, categories, orders, and shops from the admin panel.",
+    "Users can view, filter, and search product catalogs reliably.",
+    "Order lifecycle from creation to tracking functions correctly with updates reflected in user profiles.",
+    "CMS pages display updated static content as managed by administrators.",
+    "Access control correctly restricts features based on user roles and permissions as intended.",
+    "Database migrations and seeders properly setup users, roles, categories, products, and other data with no errors."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "JavaScript",
+      "Vite",
+      "TailwindCSS",
+      "Composer",
+      "npm"
+    ],
+    "features": [
+      {
+        "name": "User Authentication",
+        "description": "Handles user login, registration, and logout for both regular users and administrators.",
+        "files": [
+          "app/Http/Controllers/Auth/LoginController.php",
+          "app/Http/Controllers/Auth/RegisterController.php",
+          "app/Http/Controllers/Auth/ForgotPasswordController.php",
+          "app/Http/Controllers/Auth/ResetPasswordController.php",
+          "app/Http/Controllers/User/UserAuthController.php",
+          "app/Models/User.php",
+          "app/Models/Admin.php",
+          "config/auth.php",
+          "routes/web.php",
+          "resources/views/auth/login.blade.php",
+          "resources/views/auth/register.blade.php"
+        ]
+      },
+      {
+        "name": "Admin Panel",
+        "description": "Provides administrative functionalities for managing the application, including users, products, categories, and orders.",
+        "files": [
+          "app/Http/Controllers/Admin/AdminController.php",
+          "app/Http/Controllers/Admin/CategoryController.php",
+          "app/Http/Controllers/Admin/ProductController.php",
+          "app/Http/Controllers/Admin/OrderController.php",
+          "app/Http/Controllers/Admin/UserController.php",
+          "app/Models/Admin.php",
+          "resources/views/admin/dashboard.blade.php",
+          "resources/views/admin/categories.blade.php",
+          "resources/views/admin/products.blade.php",
+          "resources/views/admin/orders.blade.php",
+          "resources/views/admin/users.blade.php"
+        ]
+      },
+      {
+        "name": "User Management",
+        "description": "Manages user profiles, orders, and interactions.",
+        "files": [
+          "app/Http/Controllers/User/UserController.php",
+          "app/Models/User.php",
+          "resources/views/user/profile.blade.php",
+          "resources/views/user/pages/my-account.blade.php",
+          "resources/views/user/pages/my-orders.blade.php"
+        ]
+      },
+      {
+        "name": "Product Catalog",
+        "description": "Displays and manages products, categories, and product images.",
+        "files": [
+          "app/Http/Controllers/ProductController.php",
+          "app/Models/Product.php",
+          "app/Models/Category.php",
+          "app/Models/ProductImage.php",
+          "database/migrations/*_create_products_table.php",
+          "database/migrations/*_create_categories_table.php",
+          "database/migrations/*_create_product_images_table.php",
+          "resources/views/user/pages/products.blade.php",
+          "resources/views/user/pages/product-detail.blade.php"
+        ]
+      },
+      {
+        "name": "Order Management",
+        "description": "Handles order creation, tracking, and order items.",
+        "files": [
+          "app/Http/Controllers/OrderController.php",
+          "app/Models/Order.php",
+          "app/Models/OrderItem.php",
+          "database/migrations/*_create_orders_table.php",
+          "database/migrations/*_create_order_items_table.php",
+          "resources/views/user/pages/my-orders.blade.php"
+        ]
+      },
+      {
+        "name": "Shop Management",
+        "description": "Manages individual shops within the platform.",
+        "files": [
+          "app/Http/Controllers/ShopController.php",
+          "app/Models/Shop.php",
+          "database/migrations/*_create_shops_table.php"
+        ]
+      },
+      {
+        "name": "CMS Content",
+        "description": "Manages static content pages.",
+        "files": [
+          "app/Models/CmsContent.php",
+          "database/migrations/*_create_cms_contents_table.php"
+        ]
+      },
+      {
+        "name": "Permissions",
+        "description": "Manages user permissions and roles.",
+        "files": [
+          "app/Models/Permission.php",
+          "database/migrations/*_create_permissions_table.php",
+          "database/migrations/*_create_user_permissions_table.php"
+        ]
+      }
+    ]
+  }
+}

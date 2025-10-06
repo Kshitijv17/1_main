@@ -1,0 +1,18 @@
+{
+  "status": "init",
+  "type": "backend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8000",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "1_main",
+    "projectPath": "c:\\Users\\kshit\\Desktop\\laravel\\admin_panel\\1_main",
+    "testIds": [],
+    "additionalInstruction": "Use the existing test plan file: testsprite_tests/testsprite_backend_test_plan.json",
+    "envs": {
+      "API_KEY": "sk-user-sVo2LpD5ENLBA7b6-b26ic3wZP0fEw4mIeuc1Fl4BwCRS-dFXPsniIjRSNA-KY1sx2Job35i5R1KEwIj5S_YrOFDklxYY5foWYsb4T31NKqTFizZV0Wef1_DTmuw2DQCtvE"
+    }
+  },
+  "proxy": "http://5c86fd35-6942-44f9-9dc1-dfe6fcd31c81:N6uIGR7zFlfzKxdBMtTQOYvC5pwuunfz@tun.testsprite.com:8080",
+  "serverPort": 61168
+}
