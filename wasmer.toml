@@ -4,16 +4,17 @@ version = "0.1.0"
 description = "Laravel project on Wasmer"
 
 
-[command]
-run = "php -S 0.0.0.0:8000 -t public"
 
 [build]
 steps = [
-  "composer install --optimize-autoloader --no-dev"
+  "curl -sS https://getcomposer.org/installer | php",
+  "php composer.phar install --optimize-autoloader --no-dev",
   "npm install",
-  "npm run dev"
+  "npm run build"
 ]
 
+[command]
+run = "php -S 0.0.0.0:8080 -t public"
 
 [env]
 APP_ENV = "production"
