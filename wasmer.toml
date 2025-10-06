@@ -11,8 +11,7 @@ steps = [
   "npm run build"
 ]
 
-[[command]]
-name = "serve"
+[command]
 run = "php -S 0.0.0.0:8080 -t public"
 
 [env]
