@@ -1,9 +1,7 @@
 [package]
-name = "kshitijv17/power-ranger"
+name = "power-ranger"
 version = "0.1.0"
 description = "Laravel project on Wasmer"
-
-
 
 [build]
 steps = [
@@ -14,9 +12,9 @@ steps = [
 ]
 
 [command]
+name = "serve"
 run = "php -S 0.0.0.0:8080 -t public"
 
 [env]
 APP_ENV = "production"
 DB_CONNECTION = "mysql"
-
