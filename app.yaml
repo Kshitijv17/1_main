@@ -1,0 +1,5 @@
+name: power-ranger
+app_id: da_KE4I8tXU41M9
+owner: kshitijv17
+package: '.'
+kind: wasmer.io/App.v0

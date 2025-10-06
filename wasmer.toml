@@ -3,16 +3,24 @@ name = "power-ranger"
 version = "0.1.0"
 description = "Laravel project on Wasmer"
 
+[dependencies]
+"php/php" = "8.2"
+
 [build]
 steps = [
   "curl -sS https://getcomposer.org/installer | php",
-  "php composer.phar install --optimize-autoloader --no-dev",
+  "php composer.phar install --optimize-autoloader --no-dev --no-interaction",
+  "cp .env.example .env",
+  "php artisan key:generate --no-interaction",
   "npm install",
   "npm run build"
 ]
 
-[command]
-run = "php -S 0.0.0.0:8080 -t public"
+[[command]]
+name = "script"
+module = "php/php:8.2"
+runner = "https://webc.org/runner/wasi"
+annotations = { wasi = { main-args = ["-S", "0.0.0.0:8080", "-t", "public"] } }
 
 [env]
 APP_ENV = "production"

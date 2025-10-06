@@ -80,3 +80,5 @@ App\Models\User::where('role', 'superadmin')->count();
 
 // See all users with their roles
 App\Models\User::select('id', 'name', 'email', 'role')->get();
+
+wasmer deploy --app-name power-ranger --owner kshitijv17 --bump
